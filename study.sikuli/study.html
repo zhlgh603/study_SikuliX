@@ -1,0 +1,119 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>study.sikuli</h2> <a href="study.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> time
+
+count = <span class="dig">0</span>
+day = <span class="dig">0</span>
+<span class="kw">while</span> <span class="dig">1</span> == <span class="dig">1</span>:
+    localtime = time.localtime(time.time())
+    <span class="kw">if</span> <span class="dig">0</span> == day:
+        day = localtime.tm_mday
+    <span class="kw">if</span> (day &lt;&gt; localtime.tm_mday) <span class="kw">and</span> (<span class="dig">1</span> == localtime.tm_hour):
+        <span class="kw">break</span>
+    foundTicket = exists(<img src="1531221303190.png" />, <span class="dig">10</span>)
+    <span class="kw">print</span> localtime
+    <span class="kw">if</span> (None &lt;&gt; foundTicket) :
+        <span class="kw">print</span> <span class="str">"foundTicket"</span>
+
+        option = count % <span class="dig">4</span>
+
+        <span class="kw">if</span> (option == <span class="dig">0</span>) :
+            <span class="kw">print</span> <span class="str">"click A"</span>
+            <span class="skw">click</span>(<img src="1531233442101.png" />)
+
+        <span class="kw">elif</span> (option == <span class="dig">1</span>):
+            <span class="kw">print</span> <span class="str">"click B"</span>
+            <span class="skw">click</span>(<img src="1531233458583.png" />)
+
+        <span class="kw">elif</span> (option == <span class="dig">2</span>):
+            <span class="kw">print</span> <span class="str">"click C"</span>
+            <span class="skw">click</span>(<img src="1531233479568.png" />)
+
+        <span class="kw">elif</span> (option == <span class="dig">3</span>):
+            <span class="kw">print</span> <span class="str">"click D"</span>
+            <span class="skw">click</span>(<img src="1531233493819.png" />)
+
+        <span class="kw">else</span>:
+            <span class="kw">print</span> <span class="str">"click A"</span>
+            <span class="skw">click</span>(<img src="1531233515423.png" />)
+
+
+        <span class="skw">wait</span>(<img src="1531225947940.png" />)
+        <span class="skw">click</span>(<img src="1531225980498.png" />)
+
+        exists(<img src="1531234291257.png" />, <span class="dig">5</span>)
+
+        <span class="kw">print</span> <span class="str">"finish"</span>
+</pre>
+</body>
+</html>
