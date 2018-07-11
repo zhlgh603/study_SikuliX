@@ -1,0 +1,2 @@
+# study_SikuliX
+在广东软考继续教育中使用SikuliX工具的探索
